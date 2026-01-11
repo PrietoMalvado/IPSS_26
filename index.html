@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>IPSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --verde: #2F5D1E;
+    --verde-claro: #4F7F2A;
+    --amarillo: #F4D000;
+    --fondo: #F9F9F9;
+    --texto: #333;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+/* ===== HEADER ===== */
+header {
+    background: white;
+    border-bottom: 3px solid var(--amarillo);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo img {
+    height: 48px;
+}
+
+/* NAV DESKTOP */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--verde);
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--amarillo);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* CTA DESKTOP */
+.cta {
+    background: var(--verde);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background: var(--verde);
+    border-radius: 2px;
+    transition: all .4s ease;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_mGi59vgWlvDBN9JPI5-_o_54Fjyw0tpvQA&s") center/cover no-repeat;
+    color: white;
+    border-bottom: 4px solid var(--amarillo);
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* SECCIONES */
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 30px;
+}
+
+section h2 {
+    color: var(--verde);
+}
+
+/* FOOTER */
+footer {
+    background: var(--verde);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CTA MÓVIL */
+.cta-mobile {
+    display: none;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        background: white;
+        padding-top: 90px;
+        box-shadow: -5px 0 20px rgba(0,0,0,.15);
+        transition: right .4s ease;
+        z-index: 150;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 25px;
+        padding-left: 25px;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .cta {
+        display: none;
+    }
+
+    /* Hamburguesa animación */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* CTA fijo */
+    .cta-mobile {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--verde);
+        color: white;
+        text-align: center;
+        padding: 16px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-top: 4px solid var(--amarillo);
+        z-index: 200;
+    }
+
+    body {
+        padding-bottom: 75px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="./img/logo.png" alt="IPSS">
+        </div>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#acerca">Acerca del IPSS</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#programas">Programas Sociales</a></li>
+                <li><a href="#hospitales">Hospitales</a></li>
+                <li><a href="#productos">INNOVIPSS</a></li>
+                <li><a href="#congresos">Congresos</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+
+        <a href="#contacto" class="cta">Hazte miembro</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Instituto de Protección y Seguridad Social</h1>
+    <p>Comprometidos con la salud, el bienestar y el desarrollo integral.</p>
+</section>
+
+<section id="acerca">
+    <h2>Acerca del IPSS</h2>
+    <p>Institución dedicada a brindar servicios de salud y programas sociales.</p>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Escríbenos para recibir información personalizada.</p>
+</section>
+
+<footer>
+    © 2024 IPSS — Todos los derechos reservados
+</footer>
+
+<a href="#contacto" class="cta-mobile">Hazte miembro</a>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        menuToggle.classList.remove("active");
+        navMenu.classList.remove("active");
+    });
+});
+</script>
+
+</body>
+</html>
