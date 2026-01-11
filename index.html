@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>IPSS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -143,9 +144,120 @@ footer {
     padding: 20px;
 }
 
+/* ===== CONTACTO ===== */
+.contacto {
+    text-align: center;
+}
+
+.contacto-desc {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    font-size: 16px;
+}
+
+.contacto-redes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.red {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* Colores por red */
+.fb { background: #1877F2; }
+.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.mail { background: var(--verde); }
+.wa { background: #25D366; }
+
+.red:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,.25);
+}
+
 /* CTA MÓVIL */
 .cta-mobile {
     display: none;
+}
+
+.donaciones {
+    background: white;
+    border-top: 4px solid var(--amarillo);
+    border-bottom: 4px solid var(--amarillo);
+}
+
+.donaciones h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.donaciones-desc {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+}
+
+.donaciones-card {
+    max-width: 600px;
+    margin: auto;
+    background: var(--fondo);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.dato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+}
+
+.dato span {
+    font-size: 14px;
+    color: #666;
+}
+
+.dato strong {
+    font-size: 15px;
+    color: var(--verde);
+    word-break: break-all;
+}
+
+.copiar {
+    background: var(--verde);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.copiar:hover {
+    background: var(--verde-claro);
+}
+
+.nota {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #555;
 }
 
 /* ===== MOBILE ===== */
@@ -240,6 +352,7 @@ footer {
                 <li><a href="#hospitales">Hospitales</a></li>
                 <li><a href="#productos">INNOVIPSS</a></li>
                 <li><a href="#congresos">Congresos</a></li>
+                <li><a href="#donaciones">Donaciones</a></li>
             </ul>
         </nav>
 
@@ -261,9 +374,64 @@ footer {
     <p>Institución dedicada a brindar servicios de salud y programas sociales.</p>
 </section>
 
-<section id="contacto">
+<section id="donaciones" class="donaciones">
+    <h2>Donaciones por Transferencia</h2>
+    <p class="donaciones-desc">
+        Tu apoyo nos permite seguir brindando servicios de salud y programas sociales.
+        Puedes realizar tu donación mediante transferencia bancaria.
+    </p>
+
+    <div class="donaciones-card">
+        <div class="dato">
+            <span>Banco</span>
+            <strong>BBVA México</strong>
+        </div>
+
+        <div class="dato">
+            <span>Beneficiario</span>
+            <strong>Instituto de Protección y Seguridad Social</strong>
+        </div>
+
+        <div class="dato">
+            <span>CLABE interbancaria</span>
+            <strong id="clabe">012345678901234567</strong>
+            <button class="copiar" onclick="copiarCLABE()">Copiar</button>
+        </div>
+
+        <div class="dato">
+            <span>Concepto</span>
+            <strong>Donación IPSS</strong>
+        </div>
+
+        <p class="nota">
+            Si deseas recibo o comprobante, contáctanos después de realizar tu donación.
+        </p>
+    </div>
+</section>
+
+<section id="contacto" class="contacto">
     <h2>Contacto</h2>
-    <p>Escríbenos para recibir información personalizada.</p>
+    <p class="contacto-desc">
+        Estamos disponibles para atenderte por cualquiera de nuestros canales oficiales.
+    </p>
+
+    <div class="contacto-redes">
+        <a href="https://www.facebook.com/" target="_blank" class="red fb" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank" class="red ig" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="mailto:contacto@ipss.org" class="red mail" aria-label="Correo electrónico">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="https://wa.me/5215512345678" target="_blank" class="red wa" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 </section>
 
 <footer>
@@ -287,6 +455,13 @@ document.querySelectorAll("nav a").forEach(link => {
         navMenu.classList.remove("active");
     });
 });
+
+function copiarCLABE() {
+    const clabe = document.getElementById("clabe").textContent;
+    navigator.clipboard.writeText(clabe).then(() => {
+        alert("CLABE copiada al portapapeles");
+    });
+}
 </script>
 
 </body>
