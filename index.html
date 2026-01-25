@@ -22,6 +22,7 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: var(--fondo);
     color: var(--texto);
+    overflow-x: hidden;
 }
 
 /* ===== HEADER ===== */
@@ -30,7 +31,7 @@ header {
     border-bottom: 3px solid var(--amarillo);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 500; /* 🔥 ANTES 100 */
 }
 
 .header-container {
@@ -44,14 +45,14 @@ header {
 
 /* LOGO */
 .logo img {
-    height: 48px;
+    height: 80px;
 }
 
 /* NAV DESKTOP */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 22px;
+    gap: 12px;
     margin: 0;
     padding: 0;
 }
@@ -273,7 +274,11 @@ footer {
         padding-top: 90px;
         box-shadow: -5px 0 20px rgba(0,0,0,.15);
         transition: right .4s ease;
-        z-index: 150;
+        z-index: 120; /* 🔧 antes 150 */
+    }
+
+    nav.active {
+        right: 0;
     }
 
     nav ul {
@@ -282,19 +287,16 @@ footer {
         padding-left: 25px;
     }
 
-    nav.active {
-        right: 0;
-    }
-
     .menu-toggle {
         display: flex;
+        z-index: 250; /* ✅ ahora SI se ve */
     }
 
     .cta {
         display: none;
     }
 
-    /* Hamburguesa animación */
+    /* Animación hamburguesa */
     .menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
     }
@@ -307,7 +309,7 @@ footer {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    /* CTA fijo */
+    /* CTA móvil fijo REAL */
     .cta-mobile {
         display: block;
         position: fixed;
@@ -322,16 +324,41 @@ footer {
         font-weight: bold;
         text-decoration: none;
         border-top: 4px solid var(--amarillo);
-        z-index: 200;
+        z-index: 300; /* 🔥 siempre arriba */
     }
 
     body {
-        padding-bottom: 75px;
+        padding-bottom: 80px;
     }
 
     .hero h1 {
         font-size: 26px;
     }
+}
+
+/* ===== BOTÓN IDIOMA FLOTANTE ===== */
+.language-btn {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    background: white;
+    border: 2px solid var(--verde);
+    border-radius: 50px;
+    padding: 8px 12px;
+    font-weight: bold;
+    color: var(--verde);
+    cursor: pointer;
+    z-index: 300;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.language-btn select {
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--verde);
+    background: transparent;
 }
 </style>
 </head>
@@ -341,18 +368,20 @@ footer {
 <header>
     <div class="header-container">
         <div class="logo">
-            <img src="./img/logo.png" alt="IPSS">
+            <img src="./img/logo.jfif" alt="IPSS">
         </div>
 
         <nav id="navMenu">
             <ul>
-                <li><a href="#acerca">Acerca del IPSS</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#programas">Programas Sociales</a></li>
-                <li><a href="#hospitales">Hospitales</a></li>
-                <li><a href="#productos">INNOVIPSS</a></li>
-                <li><a href="#congresos">Congresos</a></li>
-                <li><a href="#donaciones">Donaciones</a></li>
+                <li><a href="#acerca" data-i18n="nav_about">Acerca de IPSS</a></li>
+                <li><a href="#beneficios" data-i18n="nav_benefits">Beneficios para miembros</a></li>
+                <li><a href="#programas" data-i18n="nav_programs">Programas Sociales de IPSS</a></li>
+                <li><a href="#hospitales" data-i18n="nav_hospitals">Red médica afiliados</a></li>
+                <li><a href="#productos" data-i18n="nav_products">NATUROTERAPIA_LILO SCOOBY+</a></li>
+                <li><a href="#innovipss" data-i18n="nav_innovipss">INNOVIPSS</a></li>
+                <li><a href="#congresos" data-i18n="nav_congresses">Centro de convenciones IPSS</a></li>
+                <li><a href="#eduloto" data-i18n="nav_donations">EDULOTO IPSS</a></li>
+                <li><a href="#contactos" data-i18n="nav_contacts">NUESTROS CONTACTOS</a></li>
             </ul>
         </nav>
 
@@ -360,58 +389,104 @@ footer {
             <span></span><span></span><span></span>
         </div>
 
-        <a href="#contacto" class="cta">Hazte miembro</a>
+        <a href="#miembro" data-i18n="nav_partner"class="cta">Conviertete en socio</a>
+
+        <div class="language-btn">
+
+        <select id="languageSelect" onchange="setLanguage(this.value)">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+        </select>
+</div>
     </div>
 </header>
 
 <section class="hero">
-    <h1>Instituto de Protección y Seguridad Social</h1>
-    <p>Comprometidos con la salud, el bienestar y el desarrollo integral.</p>
+    <h1 data-i18n="hero_title">Instituto de Protección y Seguridad Social</h1>
+    <p data-i18n="hero_subtitle">Comprometidos con la salud, el bienestar y el desarrollo integral.</p>
 </section>
 
-<section id="acerca">
-    <h2>Acerca del IPSS</h2>
-    <p>Institución dedicada a brindar servicios de salud y programas sociales.</p>
+<section id="acerca" class="acerca">
+    <h2 data-i18n="section_about">Acerca del IPSS</h2>
+    <p data-i18n="section_des_about">Institución dedicada a brindar servicios de salud y programas sociales.</p>
+</section>
+
+<section id="beneficios" class="beneficios">
+    <h2 data-i18n="section_benefits">Beneficios para miembros</h2>
+    <p data-i18n="section_des_benefits">Institución dedicada a brindar servicios de salud y programas sociales.</p>
+</section>
+
+<section id="programas" class="programas">
+    <h2 data-i18n="section_programs">Programas Sociales de IPSS</h2>
+    <p data-i18n="section_des_programs">Institución dedicada a brindar servicios de salud y programas sociales.</p>
+</section>
+
+<section id="hospitales" class="hospitales">
+    <h2 data-i18n="section_hospital">Red médica afiliados</h2>
+    <p data-i18n="section_des_hospital">Institución dedicada a brindar servicios de salud y programas sociales.</p>
+</section>
+
+<section id="productos" class="productos">
+    <h2 data-i18n="section_products">NATUROTERAPIA_LILO SCOOBY+</h2>
+    <p data-i18n="section_des_products">Institución dedicada a brindar servicios de salud y programas sociales.</p>
+</section>
+
+<section id="innovipss" class="innovipss">
+    <h2 data-i18n="section_innovipss">innovipss</h2>
+    <p data-i18n="section_des_innovipss">Institución dedicada a brindar servicios de salud y programas sociales.</p>
+</section>
+
+<section id="congresos" class="congresos">
+    <h2 data-i18n="section_congresses">Centro de convenciones IPSS</h2>
+    <p data-i18n="section_des_congresses">Institución dedicada a brindar servicios de salud y programas sociales.</p>
+</section>
+
+<section id="eduloto" class="eduloto">
+    <h2 data-i18n="section_eduloto">EDULOTO IPSS</h2>
+    <p data-i18n="section_des_eduloto">Institución dedicada a brindar servicios de salud y programas sociales.</p>
 </section>
 
 <section id="donaciones" class="donaciones">
-    <h2>Donaciones por Transferencia</h2>
-    <p class="donaciones-desc">
+    <h2 data-i18n="donations_title">Donaciones por Transferencia</h2>
+    <p class="donaciones-desc" data-i18n="donations_description">
+        <span>Tu apoyo nos permite seguir brindando servicios de salud y programas sociales.
+        Puedes realizar tu donación mediante transferencia bancaria.</span>
         Tu apoyo nos permite seguir brindando servicios de salud y programas sociales.
         Puedes realizar tu donación mediante transferencia bancaria.
     </p>
 
     <div class="donaciones-card">
         <div class="dato">
-            <span>Banco</span>
-            <strong>BBVA México</strong>
+            <span data-i18n="bank">Banco</span>
+            <strong data-i18n="bank_name">BBVA México</strong>
         </div>
 
         <div class="dato">
-            <span>Beneficiario</span>
-            <strong>Instituto de Protección y Seguridad Social</strong>
+            <span data-i18n="beneficiary">Beneficiario</span>
+            <strong data-i18n="beneficiary_institute">Instituto de Protección y Seguridad Social</strong>
         </div>
 
         <div class="dato">
-            <span>CLABE interbancaria</span>
+            <span data-i18n="nav_about">CLABE interbancaria</span>
             <strong id="clabe">012345678901234567</strong>
-            <button class="copiar" onclick="copiarCLABE()">Copiar</button>
+            <button class="copiar" onclick="copiarCLABE()" data-i18n="copy">Copiar</button>
         </div>
 
         <div class="dato">
-            <span>Concepto</span>
-            <strong>Donación IPSS</strong>
+            <span data-i18n="concept">Concepto</span>
+            <strong data-i18n="donation_concept">Donación IPSS</strong>
         </div>
 
-        <p class="nota">
+        <p class="nota" data-i18n="donation_note">
             Si deseas recibo o comprobante, contáctanos después de realizar tu donación.
         </p>
     </div>
 </section>
 
-<section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p class="contacto-desc">
+<section id="contactos" class="contacto">
+    <h2 data-i18n="contact_title">Contacto</h2>
+    <p class="contacto-desc" data-i18n="contact_description">
         Estamos disponibles para atenderte por cualquiera de nuestros canales oficiales.
     </p>
 
@@ -434,11 +509,11 @@ footer {
     </div>
 </section>
 
-<footer>
+<footer data-i18n="footer_rights">
     © 2024 IPSS — Todos los derechos reservados
 </footer>
 
-<a href="#contacto" class="cta-mobile">Hazte miembro</a>
+<a href="#contacto" class="cta-mobile" data-i18n="nav_partner">Conviertete en socio</a>
 
 <script>
 const menuToggle = document.getElementById("menuToggle");
@@ -462,6 +537,88 @@ function copiarCLABE() {
         alert("CLABE copiada al portapapeles");
     });
 }
+
+// ====== TRADUCCIONES ======
+const translations = {
+  es: {
+    //navbar
+    nav_about: "Nosotros",
+    nav_benefits: "Beneficios",
+    nav_programs: "Programas Sociales",
+    nav_hospitals: "Red Médica Afiliados",
+    nav_products: "NATUROTERAPIA_LILO SCOOBY+",
+    nav_innovipss: "INNOVIPSS",
+    nav_congresses: "Convenciones",
+    nav_donations: "Eduloto IPSS",
+    nav_contacts: "Contactos",
+    nav_partner: "Conviértete en socio",
+    //hero
+    hero_title: "Instituto Panafricano de Seguridad Social y Sanitaria",
+    hero_subtitle: "IPSS, por un mundo más humanista",
+    //acerca section
+    section_about: "Sobre Nosotros",
+    section_des_about: "Institution dédiée à la fourniture de services de santé et de programmes sociaux.",
+    
+  },
+  en: {
+    nav_about: "About Us",
+    nav_benefits: "Benefits",
+    nav_programs: "Social Programs",
+    nav_hospitals: "Affiliated Medical Network",
+    nav_products: "NATUROTHERAPY_LILO SCOOBY+",
+    nav_innovipss: "INNOVIPSS",
+    nav_congresses: "Conventions",
+    nav_donations: "IPSS Eduloto",
+    nav_contacts: "Contact",
+    nav_partner: "Become a Partner",
+    //hero
+    hero_title: "Institute of Protection and Social Security",
+    hero_subtitle: "IPSS, for a more humanistic world",
+    //acerca section
+    section_about: "Sobre Nosotros",
+    section_des_about: "Institution dédiée à la fourniture de services de santé et de programmes sociaux.",
+  },
+  fr: {
+    nav_about: "À Propos",
+    nav_benefits: "Avantages",
+    nav_programs: "Programmes Sociaux",
+    nav_hospitals: "Réseau Médical Affilié",
+    nav_products: "NATUROTHÉRAPIE_LILO SCOOBY+",
+    nav_innovipss: "INNOVIPSS",
+    nav_congresses: "Conventions",
+    nav_donations: "Eduloto IPSS",
+    nav_contacts: "Contact",
+    nav_partner: "Devenir Partenaire",
+    ////hero
+    hero_title: "Institut de Protection et de Sécurité Sociale",
+    hero_subtitle: "IPSS, pour un monde plus humaniste",
+    //acerca section
+    section_about: "Sobre Nosotros",
+    section_des_about: "Institution dédiée à la fourniture de services de santé et de programmes sociaux.",
+  }
+};
+
+function setLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+  localStorage.setItem("lang", lang);
+  document.getElementById("languageSelect").value = lang;
+}
+
+const savedLang = localStorage.getItem("lang") || "es";
+setLanguage(savedLang);
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove("active");
+        menuToggle.classList.remove("active");
+    }
+});
+
 </script>
 
 </body>
