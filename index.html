@@ -110,7 +110,7 @@ nav ul li a:hover::after {
 .hero {
     padding: 80px 20px;
     text-align: center;
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_mGi59vgWlvDBN9JPI5-_o_54Fjyw0tpvQA&s") center/cover no-repeat;
+    background: url("./img/img15.png") center/cover no-repeat;
     color: white;
     border-bottom: 4px solid var(--amarillo);
 }
@@ -143,6 +143,16 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+#acerca p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#acerca li {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* ===== CONTACTO ===== */
@@ -260,6 +270,51 @@ footer {
     text-align: center;
     color: #555;
 }
+/* ===== CARRUSEL ===== */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel img {
+    width: 30%;
+    min-width: 280px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease;
+}
+
+/* efecto bonito al pasar el mouse */
+.carousel img:hover {
+    transform: scale(1.05);
+}
+
+/* animación continua */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .carousel img {
+        width: 80%;
+        min-width: 80%;
+    }
+}
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
@@ -368,7 +423,7 @@ footer {
 <header>
     <div class="header-container">
         <div class="logo">
-            <img src="./img/logo.jfif" alt="IPSS">
+            <img src="./img/logo (1).png" alt="IPSS">
         </div>
 
         <nav id="navMenu">
@@ -408,8 +463,32 @@ footer {
 </section>
 
 <section id="acerca" class="acerca">
-    <h2 data-i18n="section_about">Acerca del IPSS</h2>
-    <p data-i18n="section_des_about">Institución dedicada a brindar servicios de salud y programas sociales.</p>
+    <h2 data-i18n="section_about"></h2>
+    <p data-i18n="section_des_about"></p>
+    <ul>
+        <li data-i18n="section_about_item_1"></li>
+        <li data-i18n="section_about_item_2"></li>
+    </ul>
+    <h2 data-i18n="section_about_1"></h2>
+    <p data-i18n="section_about_1_des"></p>
+    <h2 data-i18n="section_about_2"></h2>
+    <p data-i18n="section_about_2_des"></p>
+    <h2 data-i18n="section_about_3"></h2>
+    <p data-i18n="section_about_3_des"></p>
+    <div class="carousel">
+    <div class="carousel-track">
+        <img src="./img/img10.png" alt="Imagen 1">
+        <img src="./img/img08.png" alt="Imagen 2">
+        <img src="./img/img14.png" alt="Imagen 3">
+
+        <!-- duplicadas -->
+        <img src="./img/img10.png" alt="Imagen 1">
+        <img src="./img/img08.png" alt="Imagen 2">
+        <img src="./img/img14.png" alt="Imagen 3">
+    </div>
+</div>
+
+</div>
 </section>
 
 <section id="beneficios" class="beneficios">
@@ -556,10 +635,17 @@ const translations = {
     hero_title: "Instituto Panafricano de Seguridad Social y Sanitaria",
     hero_subtitle: "IPSS, por un mundo más humanista",
     //acerca section
-    section_about: "Sobre Nosotros",
-    section_des_about: "Institution dédiée à la fourniture de services de santé et de programmes sociaux.",
-    
-  },
+    section_about: "Sobre IPPS",
+    section_des_about: "El IPSS es la mayor institución panafricana de seguridad social y sanitaria para el pueblo africano del continente y del mundo Kamit. Es un sistema comunitario y participativo que ofrece a las poblaciones africanas residentes en África, el Caribe y en el extranjero, de todos los estratos sociales, una plataforma de excelente atención médica y seguridad social para empleados de los sectores público y privado, garantizando tranquilidad y estabilidad para los empleados y sus familias ante cualquier riesgo.",
+    section_about_item_1: "El IPSS garantiza el derecho a la salud, la atención médica de emergencia y la asistencia médica digna.",
+    section_about_item_2: "El IPSS también garantiza la protección de los medios de vida a través de su programa ERD (Ahorro para la Jubilación Digna) y proporciona los servicios sociales necesarios para el bienestar individual y colectivo.",
+    section_about_1: "Visión",
+    section_about_1_des: "Toda persona que resida o visite África debe tener acceso a una excelente protección social y atención médica para su pleno desarrollo.",
+    section_about_2:"Misión",
+    section_about_2_des:"Ofrecer un servicio de alta calidad y accesible a todas las categorías de trabajadores, personas activas que viven en zonas urbanas o rurales, y sus familias, así como a personas vulnerables y ancianos.",
+    section_about_3:"Valores",
+    section_about_3_des:"Amor - Humanismo - Felicidad",
+},
   en: {
     nav_about: "About Us",
     nav_benefits: "Benefits",
@@ -575,9 +661,17 @@ const translations = {
     hero_title: "Institute of Protection and Social Security",
     hero_subtitle: "IPSS, for a more humanistic world",
     //acerca section
-    section_about: "Sobre Nosotros",
-    section_des_about: "Institution dédiée à la fourniture de services de santé et de programmes sociaux.",
-  },
+    section_about: "About IPSS",
+    section_des_about: "IPSS is the largest Pan-African people's social and health security institution on the continent and in the Kamit world. It is a community-based and participatory system that offers African populations residing in Africa, the Caribbean, and abroad, across all social strata, a platform of excellent medical care and social security for employees in the public and private sectors, ensuring peace of mind and stability for employees and their families in the face of risks.",
+    section_about_item_1: "IPSS guarantees the right to health, emergency medical care, and dignified medical assistance.",
+    section_about_item_2: "IPSS also guarantees the protection of livelihoods through its ERD (Dignified Retirement Savings) program and provides the necessary social services for individual and collective well-being.",
+    section_about_1: "Vision",
+    section_about_1_des: "Every person residing in or visiting Africa should have access to excellent social protection and medical care for their full development.",
+    section_about_2:"Mission",
+    section_about_2_des:"To offer a high-quality, accessible service to all categories of workers, active individuals living in cities or rural areas, and their families, as well as to vulnerable people and senior citizens.",
+    section_about_3:"Values",
+    section_about_3_des:"Love - Humanism - Happiness",
+},
   fr: {
     nav_about: "À Propos",
     nav_benefits: "Avantages",
@@ -593,9 +687,17 @@ const translations = {
     hero_title: "Institut de Protection et de Sécurité Sociale",
     hero_subtitle: "IPSS, pour un monde plus humaniste",
     //acerca section
-    section_about: "Sobre Nosotros",
-    section_des_about: "Institution dédiée à la fourniture de services de santé et de programmes sociaux.",
-  }
+    section_about: "À propos de l'IPSS",
+    section_des_about: "L'IPSS est l' institution populaire Panafricaine de sécurité sociale et sanitaire la plus importante du continent et du monde Kamit. C'est un système communautaire et participatif qui offre aux populations africaines résidant en Afrique, dans les Caraïbes et à l'étranger  toute couche sociale confondue, une plateforme d'attention médicale d'excellence et la sécurité sociale aux employés des domaines publics et privés, afin d'assurer la quiétude et la stabilité aux employés et leurs familles face aux risques.",
+    section_about_item_1: "L'IPSS garantit le droit à la santé, à la prise en charge en cas d'urgence médicale et à l'assistance médicale digne.",
+    section_about_item_2: "L'IPSS garantit aussi la protection des moyens de subsistance à travers son programme ERD (Épargne Retraite Digne), et assure les services sociaux nécessaires pour le bien-être   individuel et collectif.",
+    section_about_1: "Vision",
+    section_about_1_des: "Chaque personne résidant ou en vacances en Afrique doit bénéficier d'une protection sociale et d'une attention médicale d'excellente qualité pour son plein épanouissement",
+    section_about_2:"Mission",
+    section_about_2_des:"Offrir un service populaire d'excellente qualité à toute catégorie de travailleurs, de personnes actives résidant en ville ou à la campagne, et à leurs familles, tout comme aux personnes vulnérables et aux personnes du troisième âge.",
+    section_about_3:"Valeurs",
+    section_about_3_des:"Amour - Humanisme - Bonheur",
+}
 };
 
 function setLanguage(lang) {
