@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Evita que el header fijo tape los títulos al navegar */
 }
 
 body {
@@ -43,6 +44,12 @@ img {
 
 a {
   color: inherit;
+}
+
+/* Accesibilidad: Foco visible para navegación por teclado */
+:focus-visible {
+  outline: 2px solid var(--verde);
+  outline-offset: 2px;
 }
 
 .muted {
@@ -798,5 +805,18 @@ section {
 
   .btn {
     width: 100%;
+  }
+}
+
+/* Respetar preferencia de movimiento reducido del usuario */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
