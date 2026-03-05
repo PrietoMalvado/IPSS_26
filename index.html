@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>IPSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body id="top">
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="#top" aria-label="IPSS">
+          <img src="./img/logo1.png" alt="Logo IPSS" />
+        </a>
+      </div>
+
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#acerca" data-i18n="nav_about">À propos de l’IPSS</a></li>
+          <li><a href="#beneficios" data-i18n="nav_benefits">Avantages membres</a></li>
+          <li><a href="#programas" data-i18n="nav_programs">Programmes sociaux</a></li>
+          <li><a href="#hospitales" data-i18n="nav_hospitals">Réseau médical affilié</a></li>
+          <li><a href="#productos" data-i18n="nav_products">NATUROTHÉRAPIE_LILO SCOBY+</a></li>
+          <li><a href="#partenaires" data-i18n="nav_partners">NOS PARTENAIRES</a></li>
+          <li><a href="#innovipss" data-i18n="nav_innovipss">INNOVIPSS</a></li>
+
+          <li class="nav-more" id="navMore">
+            <button
+              class="more-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span data-i18n="nav_more">Plus</span>
+              <span class="chev">▾</span>
+            </button>
+
+            <ul class="more-menu" id="moreMenu" role="menu">
+              <li><a href="#congresos" data-i18n="nav_congresses">Centre des congrès IPSS</a></li>
+              <li><a href="#eduloto" data-i18n="nav_donations">EDULOTO IPSS</a></li>
+              <li><a href="#ubicacion" data-i18n="nav_location">Localisation</a></li>
+              <li><a href="#contactos" data-i18n="nav_contacts">Nos contacts</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#contactos" class="cta" data-i18n="nav_partner">Devenir partenaire</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <h1 data-i18n="hero_title">Institut Panafricain de Sécurité Sociale et Sanitaire</h1>
+    <p data-i18n="hero_subtitle">IPSS, pour un monde plus humaniste</p>
+  </section>
+
+  <!-- ================= A) À PROPOS ================= -->
+  <section id="acerca" class="acerca">
+    <div class="section-head">
+      <h2 data-i18n="about_title">À propos de l’IPSS</h2>
+      <p class="muted" data-i18n="about_subtitle">
+        Institution panafricaine de sécurité sociale et sanitaire, communautaire et participative.
+      </p>
+    </div>
+
+    <p data-i18n="about_main_text">
+      L’IPSS est la plus grande institution panafricaine de sécurité sociale et sanitaire pour les peuples africains du
+      continent et du monde Kamit. C’est un système communautaire et participatif qui offre aux populations africaines
+      vivant en Afrique, dans les Caraïbes et à l’étranger, de tous les strates sociaux, une plateforme de soins médicaux
+      d’excellence et de protection sociale pour les travailleurs des secteurs public et privé.
+    </p>
+
+    <ul>
+      <li data-i18n="about_li_1">L’IPSS garantit le droit à la santé, la prise en charge en cas d’urgence médicale et une assistance médicale digne.</li>
+      <li data-i18n="about_li_2">L’IPSS protège également les moyens de subsistance via son programme ERD (Épargne Retraite Digne) et fournit des services sociaux essentiels.</li>
+    </ul>
+
+    <h3 data-i18n="about_vision_title">Vision</h3>
+    <p data-i18n="about_vision_text">
+      Toute personne vivant ou visitant l’Afrique doit avoir accès à une excellente protection sociale et à des soins médicaux de qualité pour son plein épanouissement.
+    </p>
+
+    <h3 data-i18n="about_mission_title">Mission</h3>
+    <p data-i18n="about_mission_text">
+      Offrir un service de haute qualité et accessible à toutes les catégories de travailleurs, aux personnes actives vivant en ville ou en zone rurale, à leurs familles, ainsi qu’aux personnes vulnérables et aux aînés.
+    </p>
+
+    <h3 data-i18n="about_values_title">Valeurs</h3>
+    <p data-i18n="about_values_text">Amour — Humanisme — Bonheur</p>
+  </section>
+
+  <!-- ================= C) BÉNÉFICES ================= -->
+  <section id="beneficios" class="beneficios">
+    <div class="section-head">
+      <h2 data-i18n="benefits_title">BÉNÉFICES DES MEMBRES</h2>
+      <p class="muted" data-i18n="benefits_subtitle">Les membres actifs de l'IPSS ont droit aux bénéfices suivants :</p>
+    </div>
+
+    <ul>
+      <li data-i18n="benefits_li_1">Carte privilège IPSS</li>
+      <li data-i18n="benefits_li_2">Carnet de santé IPSS</li>
+      <li data-i18n="benefits_li_3">Accès à des soins de santé dignes</li>
+      <li data-i18n="benefits_li_4">Accès à des hôpitaux et cliniques d'excellence</li>
+      <li data-i18n="benefits_li_5">Facilités crédits LED (Logement ÉCO Digne)</li>
+      <li data-i18n="benefits_li_6">Tarifs préférentiels (pharmacies, ophtalmologie &amp; odontologie)</li>
+    </ul>
+
+      <div class="carousel">
+      <div class="track">
+        <img src="./img/16.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/17.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/18.jpeg" alt="Bénéfices - 18" loading="lazy" />
+        <img src="./img/19.jpeg" alt="Bénéfices - 19" loading="lazy" />
+        <img src="./img/20.jpeg" alt="Bénéfices - 20" loading="lazy" />
+
+
+          <!-- Duplicadas para efecto infinito -->
+        <img src="./img/16.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/17.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/18.jpeg" alt="Bénéfices - 18" loading="lazy" />
+        <img src="./img/19.jpeg" alt="Bénéfices - 19" loading="lazy" />
+        <img src="./img/20.jpeg" alt="Bénéfices - 20" loading="lazy" />
+      </div>
+      </div>
+  </section>
+
+  <!-- ================= D) PROGRAMMES ================= -->
+  <section id="programas" class="programas">
+    <div class="section-head">
+      <h2 data-i18n="programs_title">PROGRAMMES SOCIAUX IPSS</h2>
+      <p class="muted" data-i18n="programs_subtitle">
+        Cette action principale est conformée par 6 programmes avec leur image propre.
+      </p>
+    </div>
+
+    <ol>
+      <li data-i18n="programs_li_1">IPSS_ ERP / Épargne retraite paisible</li>
+      <li data-i18n="programs_li_2">IPSS_ LED / Logement ECO Digne</li>
+      <li data-i18n="programs_li_3">EDUSANTÉ#IPSS (Prévention santé et bien-être)</li>
+      <li data-i18n="programs_li_4">Appui spécial IPSS (appui aux orphelins et personnes avec des capacités différentes/ éducation et aliments)</li>
+      <li data-i18n="programs_li_5">TakeAction#IPSS (Actions humanitaires IPSS)</li>
+      <li data-i18n="programs_li_6">Secours IPSS</li>
+    </ol>
+
+      <div class="carousel">
+      <div class="track">
+        <img src="./img/21.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/22.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/23.jpeg" alt="Bénéfices - 18" loading="lazy" />
+        <img src="./img/24.jpeg" alt="Bénéfices - 19" loading="lazy" />
+
+
+          <!-- Duplicadas para efecto infinito -->
+        <img src="./img/21.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/22.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/23.jpeg" alt="Bénéfices - 18" loading="lazy" />
+        <img src="./img/24.jpeg" alt="Bénéfices - 19" loading="lazy" />
+      </div>
+      </div>
+  </section>
+
+  <!-- ================= E) RÉSEAU MÉDICAL ================= -->
+  <section id="hospitales" class="hospitales">
+    <div class="section-head">
+      <h2 data-i18n="hospitals_title">HÔPITAUX, CLINIQUES ET PHARMACIES AFFILIÉS</h2>
+      <p class="muted" data-i18n="hospitals_subtitle">
+        Réseau d'hôpitaux, cliniques spécialisées, pharmacies et laboratoires affiliés au système IPSS.
+      </p>
+    </div>
+
+    <!-- Nota interna eliminada del HTML final -->
+    <p data-i18n="hospitals_text">
+      Il s'agit d'un important réseau d'hôpitaux, de cliniques spécialisées, de pharmacies et de laboratoires affiliés au système IPSS,
+      offrant un meilleur services aux membres actifs de l'IPSS.
+    </p>
+
+      <div class="carousel">
+      <div class="track">
+        <img src="./img/25.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/26.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/27.jpeg" alt="Bénéfices - 18" loading="lazy" />
+
+          <!-- Duplicadas para efecto infinito -->
+        <img src="./img/25.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/26.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/27.jpeg" alt="Bénéfices - 18" loading="lazy" />
+      </div>
+      </div>
+  </section>
+
+  <!-- ================= G) PARTENAIRES ================= -->
+  <section id="partenaires" class="partners">
+    <div class="section-head">
+      <h2 data-i18n="partners_title">NOS PARTENAIRES</h2>
+      <p class="muted" data-i18n="partners_subtitle">
+        Institutions publiques et privées (entreprises, marques, etc.) qui accompagnent et soutiennent les actions humanitaires,
+        programmes sociaux et sanitaires de l’IPSS.
+      </p>
+    </div>
+    
+    <div class="carousel">
+      <div class="track">
+      <img src="./img/29.jpeg" alt="Partenaire - 29" loading="lazy" />
+      <img src="./img/30.jpeg" alt="Partenaire - 30" loading="lazy" />
+      <img src="./img/31.jpeg" alt="Partenaire - 31" loading="lazy" />
+      <img src="./img/32.jpeg" alt="Partenaire - 32" loading="lazy" />
+      <img src="./img/33.jpeg" alt="Partenaire - 33" loading="lazy" />
+      <img src="./img/34.jpeg" alt="Partenaire - 34" loading="lazy" />
+
+
+        <!-- Duplicadas para efecto infinito -->
+      <img src="./img/29.jpeg" alt="Partenaire - 29" loading="lazy" />
+      <img src="./img/30.jpeg" alt="Partenaire - 30" loading="lazy" />
+      <img src="./img/31.jpeg" alt="Partenaire - 31" loading="lazy" />
+      <img src="./img/32.jpeg" alt="Partenaire - 32" loading="lazy" />
+      <img src="./img/33.jpeg" alt="Partenaire - 33" loading="lazy" />
+      <img src="./img/34.jpeg" alt="Partenaire - 34" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= F) PRODUIT ================= -->
+  <section id="productos" class="productos">
+    <div class="section-head">
+      <h2 data-i18n="product_title">NATUROTHÉRAPIE_LILO SCOBY+</h2>
+      <p class="muted" data-i18n="product_subtitle">Fiche Produit – LILO SCOBY PLUS</p>
+    </div>
+
+    <div class="producto-frame">
+      <img class="producto-img" src="./img/28.jpeg" alt="LILO SCOBY PLUS / LSP4 - 28" />
+    </div>
+
+    <div class="producto-info producto-texto">
+      <p data-i18n-html="prod_name"><strong>Nom du produit :</strong> LILO SCOBY PLUS / LSP4</p>
+      <p data-i18n-html="prod_cat"><strong>Catégorie :</strong> Phytothérapie / Boisson thérapeutique naturelle</p>
+      <p data-i18n-html="prod_origin"><strong>Origine :</strong> Créé en Afrique centrale par le Dr Emma Djinghs, après 18 ans de recherche et d’expérimentation.</p>
+
+      <p data-i18n-html="prod_desc">
+        <strong>Description :</strong>
+        LILO SCOBY PLUS est une boisson thérapeutique innovante à base de 130 éléments naturels (fruits, légumes, plantes médicinales, minéraux),
+        fermentés et enrichis à froid. Ce procédé unique garantit la vitalité et l'efficacité du produit.
+      </p>
+
+      <p data-i18n-html="prod_not_title"><strong>Ce que ce n’est pas :</strong></p>
+      <ul>
+        <li data-i18n="prod_not_li_1">Ce n’est pas un médicament</li>
+        <li data-i18n="prod_not_li_2">Ce n’est pas un complément alimentaire</li>
+        <li data-i18n="prod_not_li_3">Ce n’est pas un supplément nutritionnel... Mais ça englobe tout ce qui a été cité (...)</li>
+      </ul>
+
+      <p data-i18n-html="prod_is_title">
+        <strong>Ce que c’est :</strong>
+        Un remède phytothérapeutique vivant, une véritable pharmacie liquide, agissant dans la prévention et en cure.
+      </p>
+
+      <p data-i18n-html="prod_also_title"><strong>Lilo Scoby Plus c'est aussi :</strong></p>
+      <p data-i18n="prod_also_text">
+        130 éléments naturels, symbiotiquement préparés à froid, une synergie vivante, un soutien biologique, une purification,
+        une intelligence cellulaire, une approche biologique, responsable du bien-être et intégrative.
+      </p>
+
+      <p data-i18n-html="prod_benefits_title"><strong>Bienfaits :</strong></p>
+      <ul>
+        <li data-i18n="prod_benefits_li_1">Détox profonde</li>
+        <li data-i18n="prod_benefits_li_2">Renforcement immunitaire</li>
+        <li data-i18n="prod_benefits_li_3">Soutien des cellules grâce aux cellules souches végétales</li>
+        <li data-i18n="prod_benefits_li_4">Vitalité et équilibre général</li>
+      </ul>
+
+      <p data-i18n-html="prod_usage"><strong>Utilisation :</strong> À consommer en cure ou en entretien. Dose et durée selon les besoins à définir selon protocole conseillé.</p>
+      <p data-i18n-html="prod_presentation"><strong>Présentation :</strong> Liquide en bouteille – prêt à boire – conservation au sec</p>
+      <p data-i18n-html="prod_target"><strong>Cible :</strong> Toute personne soucieuse de sa santé, en prévention, en accompagnement thérapeutique et en cure.</p>
+    </div>
+  </section>
+
+  <!-- ================= H) INNOVIPSS ================= -->
+  <section id="innovipss" class="innovipss">
+    <div class="section-head">
+      <h2 data-i18n="innovipss_title">INNOVIPSS</h2>
+      <p class="muted" data-i18n="innovipss_subtitle">
+        INNOVIPSS est un important laboratoire institutionnel de recherches avangardistes sur la santé,
+        dont les activités et produits sont divulgués dans cet espace.
+      </p>
+    </div>
+
+      <div class="carousel">
+      <div class="track">
+        <img src="./img/35.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/36.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/37.jpeg" alt="Bénéfices - 18" loading="lazy" />
+        <img src="./img/38.jpeg" alt="Bénéfices - 19" loading="lazy" />
+
+          <!-- Duplicadas para efecto infinito -->
+        <img src="./img/35.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/36.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/37.jpeg" alt="Bénéfices - 18" loading="lazy" />
+        <img src="./img/38.jpeg" alt="Bénéfices - 19" loading="lazy" />
+      </div>
+      </div>
+
+  </section>
+
+  <!-- ================= I) CONGRÈS ================= -->
+  <section id="congresos" class="congresos">
+    <div class="section-head">
+      <h2 data-i18n="congress_title">CENTRE DES CONGRÈS IPSS</h2>
+      <p class="muted" data-i18n="congress_subtitle">
+        Le centre des congrès IPSS organise d'importants événements internationaux et rencontres autour des thématiques liées à la santé et à l'humanitaire,
+        et présente à travers cet espace, le calendrier des événements programmés.
+      </p>
+    </div>
+
+      <div class="carousel">
+      <div class="track">
+        <img src="./img/39.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/40.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/41.jpeg" alt="Bénéfices - 18" loading="lazy" />
+        <img src="./img/42.jpeg" alt="Bénéfices - 19" loading="lazy" />
+
+          <!-- Duplicadas para efecto infinito -->
+        <img src="./img/39.jpeg" alt="Bénéfices - 16" loading="lazy" />
+        <img src="./img/40.jpeg" alt="Bénéfices - 17" loading="lazy" />
+        <img src="./img/41.jpeg" alt="Bénéfices - 18" loading="lazy" />
+        <img src="./img/42.jpeg" alt="Bénéfices - 19" loading="lazy" />
+      </div>
+      </div>
+
+  </section>
+
+  <!-- ================= J) EDULOTO ================= -->
+  <section id="eduloto" class="eduloto">
+    <div class="section-head">
+      <h2 data-i18n="eduloto_title">EDULOTO IPSS</h2>
+      <p class="muted" data-i18n="eduloto_subtitle">
+        Activité économico-sociale avant chaque rentrée des classes, permettant de gagner des matériels scolaires et des bourses d'étude,
+        via un ticket loto obtenu à des points de vente précis.
+      </p>
+    </div>
+
+      <div class="carousel">
+        <div class="track">
+          <img src="./img/43.jpeg" alt="EDULOTO - 43" loading="lazy" />
+          <img src="./img/44.jpeg" alt="EDULOTO - 44" loading="lazy" />
+          <img src="./img/45.jpeg" alt="EDULOTO - 45" loading="lazy" />
+          <img src="./img/46.jpeg" alt="EDULOTO - 46" loading="lazy" />
+          <img src="./img/47.jpeg" alt="EDULOTO - 47" loading="lazy" />
+          <img src="./img/48.jpeg" alt="EDULOTO - 48" loading="lazy" />
+          <img src="./img/49.jpeg" alt="EDULOTO - 49" loading="lazy" />
+          <img src="./img/50.jpeg" alt="EDULOTO - 50" loading="lazy" />
+
+            <!-- Duplicadas para efecto infinito -->
+          <img src="./img/43.jpeg" alt="EDULOTO - 43" loading="lazy" />
+          <img src="./img/44.jpeg" alt="EDULOTO - 44" loading="lazy" />
+          <img src="./img/45.jpeg" alt="EDULOTO - 45" loading="lazy" />
+          <img src="./img/46.jpeg" alt="EDULOTO - 46" loading="lazy" />
+          <img src="./img/47.jpeg" alt="EDULOTO - 47" loading="lazy" />
+          <img src="./img/48.jpeg" alt="EDULOTO - 48" loading="lazy" />
+          <img src="./img/49.jpeg" alt="EDULOTO - 49" loading="lazy" />
+          <img src="./img/50.jpeg" alt="EDULOTO - 50" loading="lazy" />
+      </div>
+  </div>
+
+    <p class="muted" style="margin-top:16px" data-i18n="eduloto_note">
+      Nota: dans cet espace virtuel, avant la rentrée scolaire, des annonces seront publiées concernant des tirages au sort pour gagner des fournitures scolaires.
+    </p>
+  </section>
+
+  <!-- ================= UBICACIÓN ================= -->
+  <section id="ubicacion" class="ubicacion">
+    <div class="section-head">
+      <h2 data-i18n="location_title">Localisation</h2>
+      <p class="muted" data-i18n="location_subtitle">
+        Retrouvez-nous facilement. Vous pouvez ouvrir l’itinéraire sur Google Maps ou copier l’adresse.
+      </p>
+    </div>
+
+    <div class="location-grid">
+      <div class="location-card">
+        <div class="location-badge">
+          <i class="fa-solid fa-location-dot"></i>
+          <span data-i18n="office_badge">Bureau IPSS</span>
+        </div>
+
+        <h3 class="location-title" data-i18n="office_name">Siège / Bureau IPSS</h3>
+        <p class="location-text" data-i18n="office_city">Bangui, République Centrafricaine</p>
+
+        <div class="location-actions">
+          <a
+            class="btn btn-primary"
+            id="openMapBtn"
+            target="_blank"
+            rel="noopener"
+            href="https://www.google.com/maps?q=4.362802505493164,18.577829360961914&z=17&hl=es"
+            data-i18n="map_open"
+          >
+            Ouvrir dans Google Maps
+          </a>
+
+          <button class="btn btn-ghost" id="copyLocationBtn" type="button" data-i18n="map_copy">
+            Copier l’adresse
+          </button>
+        </div>
+
+        <div class="location-meta">
+          <div class="meta-pill">
+            <i class="fa-solid fa-clock"></i>
+            <span data-i18n="office_hours">Lun–Ven · 09:00–17:00</span>
+          </div>
+          <div class="meta-pill">
+            <i class="fa-solid fa-phone"></i>
+            <span>+ (236) 73198252</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-card">
+        <iframe
+          title="Ubicación IPSS"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=4.362802505493164,18.577829360961914&z=17&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTOS ================= -->
+  <section id="contactos" class="contacto">
+    <div class="section-head">
+      <h2 data-i18n="contacts_title">NOS CONTACTS</h2>
+      <p class="muted contacto-desc" data-i18n-html="contacts_desc">
+        Pour finaliser avec les actions principales, <b>NOS CONTACTS</b> et <b>LANGUES</b> sont déjà intégrées
+        avec le système de traduction français–espagnol–anglais.
+        <br><br>
+        Je souhaite également vous informer que toute l’information doit être insérée en français telle que je
+        l’envoie, afin de conserver le contexte, puisque la communauté principale est francophone.
+      </p>
+    </div>
+
+    <div class="contacto-card">
+      <p class="contacto-line">
+        <b>WhatsApp:</b>
+        <a class="contacto-link" href="https://wa.me/23673198252" target="_blank" rel="noopener">
+          +(236) 73198252
+        </a>
+      </p>
+
+      <div class="contacto-redes" aria-label="Redes sociales">
+        <a class="red fb" href="#" aria-label="Facebook" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a class="red ig" href="#" aria-label="Instagram" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a class="red mail" href="mailto:correo@dominio.com" aria-label="Correo">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a class="red wa" href="https://wa.me/23673198252" aria-label="WhatsApp" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selector de idioma (solo uno) -->
+  <div class="language-floating">
+    <select id="languageSelect" aria-label="Sélectionner la langue">
+      <option value="fr">FR</option>
+      <option value="es">ES</option>
+      <option value="en">EN</option>
+    </select>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
