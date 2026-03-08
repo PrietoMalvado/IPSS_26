@@ -23,7 +23,7 @@
     <div class="header-container">
       <div class="logo">
         <a href="#top" aria-label="IPSS">
-          <img src="./img/logo1.png" alt="Logo IPSS" />
+          <img src="./img/logo_1.png" alt="Logo IPSS" />
         </a>
       </div>
 
@@ -50,8 +50,9 @@
 
             <ul class="more-menu" id="moreMenu" role="menu">
               <li><a href="#congresos" data-i18n="nav_congresses">Centre des congrès IPSS</a></li>
-              <li><a href="#eduloto" data-i18n="nav_donations">EDULOTO IPSS</a></li>
+              <li><a href="#eduloto" data-i18n="nav_eudu">EDULOTO IPSS</a></li>
               <li><a href="#ubicacion" data-i18n="nav_location">Localisation</a></li>
+              <li><a href="#donaciones" data-i18n="nav_donations">Dons</a></li>
               <li><a href="#contactos" data-i18n="nav_contacts">Nos contacts</a></li>
             </ul>
           </li>
@@ -443,7 +444,39 @@
       </div>
     </div>
   </section>
+  <!-- ================= donaciones ================= -->
+   <section id="donaciones" class="donaciones">
+    <h2 data-i18n="donations_title"></h2>
+    <p class="donaciones-desc" data-i18n="donations_description">
+    </p>
 
+    <div class="donaciones-card">
+        <div class="dato">
+            <span data-i18n="bank"></span>
+            <strong data-i18n="bank_name"></strong>
+        </div>
+
+        <div class="dato">
+            <span data-i18n="beneficiary"></span>
+            <strong data-i18n="beneficiary_institute"></strong>
+        </div>
+
+        <div class="dato">
+            <span data-i18n="clabe_int"></span>
+            <strong id="clabe">012345678901234567</strong>
+            <button class="copiar" onclick="copiarCLABE()" data-i18n="copy">Copiar</button>
+        </div>
+
+        <div class="dato">
+            <span data-i18n="concept"></span>
+            <strong data-i18n="donation_concept"></strong>
+        </div>
+
+        <p class="nota" data-i18n="donation_note">
+            
+        </p>
+    </div>
+</section>
   <!-- ================= CONTACTOS ================= -->
   <section id="contactos" class="contacto">
     <div class="section-head">
@@ -484,6 +517,62 @@
       </div>
     </div>
   </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <img src="./img/logo_1.png" alt="IPSS Logo" class="footer-logo">
+      <p data-i18n="footer_p">
+        Institut Panafricain de Sécurité Sociale et Sanitaire.
+        Une plateforme humaniste dédiée au bien-être, à la santé
+        et à la protection sociale des peuples africains.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-i18n="footer_navigation">Navigation</h4>
+      <ul>
+          <li><a href="#acerca" data-i18n="nav_about">À propos de l’IPSS</a></li>
+          <li><a href="#beneficios" data-i18n="nav_benefits">Avantages membres</a></li>
+          <li><a href="#programas" data-i18n="nav_programs">Programmes sociaux</a></li>
+          <li><a href="#hospitales" data-i18n="nav_hospitals">Réseau médical affilié</a></li>
+          <li><a href="#productos" data-i18n="nav_products">NATUROTHÉRAPIE_LILO SCOBY+</a></li>
+          <li><a href="#partenaires" data-i18n="nav_partners">NOS PARTENAIRES</a></li>
+          <li><a href="#innovipss" data-i18n="nav_innovipss">INNOVIPSS</a></li>
+
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-i18n="footer_contact">Contact</h4>
+      <p data-i18n="footer_address">Bangui, République Centrafricaine</p>
+      <p >+ (236) 73198252</p>
+      <p >contact@ipss.org</p>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-i18n="footer_follow">Suivez-nous</h4>
+
+      <div class="footer-social">
+        <a href="#contactos"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#contactos"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#contactos"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#contactos"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+
+      <a href="#top" class="back-top" data-i18n="footer_back_top">
+        ↑ Retour en haut
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p data-i18n="footer_copyright">© 2026 IPSS — Tous droits réservés</p>
+  </div>
+</footer>
 
   <!-- Selector de idioma (solo uno) -->
   <div class="language-floating">

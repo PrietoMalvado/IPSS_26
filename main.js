@@ -73,8 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_innovipss: "INNOVIPSS",
       nav_more: "Plus",
       nav_congresses: "Centre des congrès IPSS",
-      nav_donations: "EDULOTO IPSS",
+      nav_eudu: "EDULOTO IPSS",
       nav_location: "Localisation",
+      nav_donations: "Dons",
       nav_contacts: "Nos contacts",
       nav_partner: "Devenir partenaire",
 
@@ -162,7 +163,26 @@ document.addEventListener("DOMContentLoaded", () => {
       contacts_title: "NOS CONTACTS",
       contacts_desc: 'Pour finaliser avec les actions principales, <b>NOS CONTACTS</b> et <b>LANGUES</b> sont déjà intégrées avec le système de traduction français–espagnol–anglais.<br><br>Je souhaite également vous informer que toute l’information doit être insérée en français telle que je l’envoie, afin de conserver le contexte, puisque la communauté principale est francophone.',
 
-      copy_success: "Adresse copiée dans le presse-papiers"
+      copy_success: "Adresse copiée dans le presse-papiers",
+
+      donations_title: "DONS",
+      donations_description: "Votre soutien nous permet de continuer à offrir des services de santé et des programmes sociaux. Vous pouvez effectuer votre don par virement bancaire.",
+      bank: "Banque",
+      bank_name: "ECOBANK",
+      beneficiary: "Bénéficiaire",
+      beneficiary_institute: "Institut Panafricain de Sécurité Sociale et de Santé",
+      clabe_int: "Numéro de compte",
+      copy: "Copier",
+      concept: "Motif",
+      donation_concept: "Motif du don",
+      donation_note: "Si vous souhaitez un reçu ou un justificatif, veuillez nous contacter après avoir effectué votre don.",
+      
+      footer_p: "IPSS, pour un monde plus humaniste",
+      footer_navigation: "Navigation",
+      footer_contacts: "Contacts",
+      footer_follow: "Suivez-nous",
+      footer_back_to_top: "Retour en haut",
+      footer_copyright: "© 2026 IPSS. Tous droits réservés."
     },
 
     es: {
@@ -175,9 +195,10 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_innovipss: "INNOVIPSS",
       nav_more: "Más",
       nav_congresses: "Centro de convenciones IPSS",
-      nav_donations: "EDULOTO IPSS",
+      nav_eudu: "EDULOTO IPSS",
       nav_location: "Ubicación",
       nav_contacts: "Nuestros contactos",
+      nav_donations: "Donaciones",
       nav_partner: "Conviértete en socio",
 
       hero_title: "Instituto Panafricano de Seguridad Social y Sanitaria",
@@ -264,7 +285,27 @@ document.addEventListener("DOMContentLoaded", () => {
       contacts_title: "NUESTROS CONTACTOS",
       contacts_desc: 'Para finalizar con las acciones principales, <b>NUESTROS CONTACTOS</b> e <b>IDIOMAS</b> ya están integrados con el sistema de traducción francés–español–inglés.<br><br>También deseo informarte que toda la información debe insertarse en francés tal como la envío, para conservar el contexto, ya que la comunidad principal es francófona.',
 
-      copy_success: "Dirección copiada al portapapeles"
+      copy_success: "Dirección copiada al portapapeles",
+
+      donations_title: "DONACIONES",
+      donations_description: "Tu apoyo nos permite seguir brindando servicios de salud y programas sociales. Puedes realizar tu donación mediante transferencia bancaria.Tu apoyo nos permite seguir brindando servicios de salud y programas sociales.Puedes realizar tu donación mediante transferencia bancaria.",
+      bank: "Banco",
+      bank_name: "ECOBANK",
+      beneficiary: "Beneficiario",
+      beneficiary_institute: "Instituto Panafricano de Seguridad Social y Sanitaria",
+      clabe_int: "Numero de cuenta",
+      copy:"Copiar",
+      concept: "Concepto",
+      donation_concept: "Concepto de donacion",
+      donation_note: "Si deseas recibo o comprobante, contáctanos después de realizar tu donación.",
+      
+      footer_p: "IPSS, por un mundo más humanista",
+      footer_navigation: "Navegación",
+      footer_contacts: "Contactos",
+      footer_follow: "Síguenos",
+      footer_back_to_top: "Volver arriba",
+      footer_copyright: "© 2026 IPSS. Todos los derechos reservados."
+
     },
 
     en: {
@@ -277,9 +318,10 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_innovipss: "INNOVIPSS",
       nav_more: "More",
       nav_congresses: "IPSS convention center",
-      nav_donations: "EDULOTO IPSS",
+      nav_eudu: "EDULOTO IPSS",
       nav_location: "Location",
       nav_contacts: "Our contacts",
+      nav_donations: "Donations",
       nav_partner: "Become a partner",
 
       hero_title: "Pan-African Institute of Social and Health Security",
@@ -366,7 +408,26 @@ document.addEventListener("DOMContentLoaded", () => {
       contacts_title: "OUR CONTACTS",
       contacts_desc: 'To conclude the main actions, <b>OUR CONTACTS</b> and <b>LANGUAGES</b> are already integrated with the French–Spanish–English translation system.<br><br>I would also like to inform you that all information should be entered in French as I send it, in order to preserve the context, since the main community is French-speaking.',
 
-      copy_success: "Address copied to clipboard"
+      copy_success: "Address copied to clipboard",
+
+      donations_title: "DONATIONS",
+      donations_description: "Your support allows us to continue providing health services and social programs. You can make your donation via bank transfer.",
+      bank: "Bank",
+      bank_name: "ECOBANK",
+      beneficiary: "Beneficiary",
+      beneficiary_institute: "Pan-African Institute of Social Security and Health",
+      clabe_int: "Account number",
+      copy: "Copy",
+      concept: "Reference",
+      donation_concept: "Donation reference",
+      donation_note: "If you require a receipt or proof of payment, please contact us after making your donation.",
+
+      footer_p: "IPSS, for a more humanistic world",
+      footer_navigation: "Navigation",
+      footer_contacts: "Contact",
+      footer_follow: "Follow us",
+      footer_back_to_top: "Back to top",
+      footer_copyright: "© 2026 IPSS. All rights reserved."
     }
   };
 
