@@ -530,3 +530,10 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+function copiarCLABE() {
+    const clabe = document.getElementById("clabe").textContent;
+    navigator.clipboard.writeText(clabe).then(() => {
+        alert("CLABE copiada al portapapeles");
+    });
+}
